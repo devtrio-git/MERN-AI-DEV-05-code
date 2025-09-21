@@ -1,0 +1,164 @@
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    padding         : 20px;
+    font-family     : Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: skyblue;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+
+.container {
+    width                : 100%;
+    height               : 600px;
+    background           : lightcoral;
+    border-radius        : 15px;
+    box-shadow           : 5px 5px 4px gray;
+    overflow             : auto;
+    display              : flex;
+    /* flex-wrap         : wrap-reverse; */
+    /* justify-content   : center; */
+    /* ROW (default) */
+    /* gap               : 30px; */
+
+    /* justify-content: flex-end;
+    justify-content: flex-start;
+
+    justify-content: space-between;
+    justify-content: space-evenly;
+    justify-content: space-around;
+
+    justify-content: center;
+
+
+    align-items: center;
+    align-items: flex-end;
+    align-items: flex-start; */
+
+    /* 
+    justify-content: center;
+    align-items    : center; */
+    /* 
+    flex-direction : row-reverse;
+    justify-content: flex-end; */
+
+
+    /* COLUMN (default) */
+
+    /* For direction column justify content work for y axis */
+    /* For direction column align item work for x axis */
+
+    /* flex-direction : column;
+    justify-content: center;
+    align-items    : center; */
+
+
+
+}
+
+.container2 {
+    width        : 100%;
+    height       : 150px;
+    background   : lightcoral;
+    border-radius: 15px;
+    box-shadow   : 5px 5px 4px gray;
+    overflow     : auto;
+
+
+    display: flex;
+    gap    : 20px;
+
+
+}
+
+.container3 {
+    width        : 100%;
+    height       : 150px;
+    background   : lightcoral;
+    border-radius: 15px;
+    box-shadow   : 5px 5px 4px gray;
+    overflow     : auto;
+
+    display   : flex;
+    /* gap    : 20px; */
+
+
+}
+
+.card {
+    height          : 100px;
+    width           : 100px;
+    border-radius   : 15px;
+    background      : red;
+    /* flex-shrink  : 0; */
+    /* flex-grow    : 1; */
+}
+
+
+.card:first-child {
+    background: rgb(164, 23, 46);
+}
+
+.card:nth-child(2) {
+    background: rgb(164, 23, 136);
+}
+
+.card:nth-child(3) {
+    background: rgb(164, 157, 23);
+}
+
+.card:last-child {
+    background: rgb(23, 164, 138);
+}
+
+/* xxxxxxxxxxxxxxxxxxxxx */
+
+
+.container4 {
+    width        : 100%;
+    height       : 150px;
+    background   : lightcoral;
+    border-radius: 15px;
+    box-shadow   : 5px 5px 4px gray;
+    overflow     : auto;
+
+    display   : flex;
+    /* gap    : 20px; */
+
+
+}
+
+
+.cardx {
+    height          : 100px;
+    width           : 100px;
+    border-radius   : 15px;
+    background      : red;
+    /* flex-shrink  : 0; */
+    /* flex-grow    : 1; */
+}
+
+
+.cardx:first-child {
+    background: rgb(164, 23, 46);
+    flex      : 0.5;
+}
+
+.cardx:nth-child(2) {
+    background: rgb(164, 23, 136);
+    flex      : 0.25;
+}
+
+.cardx:nth-child(3) {
+    background: rgb(164, 157, 23);
+    flex      : 0.25;
+
+}
