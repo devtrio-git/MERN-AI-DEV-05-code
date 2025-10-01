@@ -1,0 +1,53 @@
+/* SELECTORS
+1. Universal Selector
+2. Tagname Selector
+3. ID Selector (# == Unique)
+4. Class Selector (. == same class for many tags) */
+
+
+
+body {
+    background-color: lightcoral;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* h1 {
+    color: white;
+    text-align: center;
+    background-color: darkgreen;
+} */
+
+/* p {
+    color: white;
+    font-size: 20px;
+    text-align: justify;
+    background-color: darkslateblue;
+} */
+
+/* Id Selector */
+#heading1{
+    color: darkgreen;
+    background-color: lightgray;
+    text-align: center;
+    text-decoration-line: underline;
+}
+#heading2{
+    color: darkred;
+    background-color: aliceblue;
+    text-align: center;
+    text-decoration-line: line-through;
+    text-decoration-color: red;
+}
+#heading3{
+    color: darkorange;
+    background-color: lightgreen;
+    text-align: end;
+}
+
+/* Class Selector */
+.para{
+    color: white;
+    font-size: 20px;
+    text-align: justify;
+    background-color: lightseagreen;
+}
