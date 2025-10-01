@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./About/about.html">About</a></li>
+            <li><a href="./Contact/contact.html">Contact</a></li>
+            <li><a href="./About/FAQs/faqs.html">FAQs</a></li>
+            <li><a href="#">Tables</a></li>
+        </ul>
+    </div>
+    <h1>Tables in HTML</h1>
+    <table border="1" width="100%" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Course</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ansar Waseem</td>
+                <td>24</td>
+                <td>Data Science</td>
+                <td>Karachi</td>
+            </tr>
+            <tr>
+                <td>Aqsa Iqbal</td>
+                <td>23</td>
+                <td>Computer Science</td>
+                <td>Islamabad</td>
+            </tr>
+            <tr>
+                <td>Saqib</td>
+                <td>25</td>
+                <td>AI Science</td>
+                <td>Lahore</td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+
+    <!-- RowSpan ColSpan -->
+    <table border="1" width="50%" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>SUBJECT</th>
+                <th>MARKS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Ashar Ahmed</td>
+                <td>Advanced JS</td>
+                <td>92</td>
+            </tr>
+            <tr>
+                <td>React</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Owais Ahmed</td>
+                <td>Advanced Cloud</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Backend</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td colspan="2">Total Average</td>
+                <td>88.92%</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
