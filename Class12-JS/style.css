@@ -1,0 +1,42 @@
+:root {
+    --white          : #fff;
+    --black          : #000;
+    --text-color     : #fff;
+    --primary-color  : #0881e3;
+    --page-background: linear-gradient(164deg, #000, #081825 43%, #06131d);
+}
+
+body {
+    background: var(--page-background);
+    color     : var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+small,
+li,
+input,
+textarea {
+    color: var(--text-color) !important;
+}
+
+h1 {
+    font-size: 200px !important;
+}
+
+.primary-text {
+    color: var(--primary-color) !important;
+}
+
+/* hero section */
+.hero_wrapper {
+    min-height : 100dvh;
+    width      : 100%;
+    padding-top: 80px;
+}
