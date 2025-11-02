@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Storage in JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f8fb;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0055aa;
+        }
+
+        h2 {
+            color: #0077cc;
+            border-bottom: 2px solid #0077cc;
+            padding-bottom: 5px;
+        }
+
+        .note {
+            background: #e8f4ff;
+            border-left: 5px solid #0077cc;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .example {
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            background: #0077cc;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            margin-top: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #005fa3;
+        }
+
+        input {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background: #e8f4ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>📦 JavaScript Objects & 💾 Browser Storage in JavaScript</h1>
+
+    <!-- 🧠 What are Objects -->
+    <h2>🧠 What is an Object in JavaScript?</h2>
+    <div class="note">
+        <b>English:</b>
+        An <b>Object</b> in JavaScript is a collection of <b>key-value pairs</b>.
+        Each key (called a property) stores some value like text, number, or another object.<br><br>
+        <b>Urdu:</b>
+        JavaScript mai <b>Object</b> ek box jesa hota hai jisme hum <b>key-value pairs</b> mai data store karte hain.
+        Har key ek property hoti hai jisme value hoti hai (text, number, ya object).
+    </div>
+    <h2>🔹 Example 1: Simple Object</h2>
+    <div class="example">
+        <pre>
+// JavaScript Object
+const student = {
+  name: "Ali",
+  age: 20,
+  course: "Web Development"
+};
+
+// Accessing values
+console.log(student.name);  // Output: Ali
+console.log(student.age);   // Output: 20
+    </pre>
+    </div>
+
+
+    <h2>🛠️ Example 2: Object with Function (Method)</h2>
+    <div class="example">
+        <pre>
+const person = {
+  firstName: "Ashar",
+  lastName: "Ahmed",
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+console.log(person.fullName()); // Output: Ashar Ahmed
+    </pre>
+    </div>
+
+    <div class="note">
+        <b>Urdu Explanation:</b>
+        Jab hum object ke andar function likhte hain to use "method" kehte hain.
+        Yahan `fullName()` ek method hai jo `this` keyword se apne object ke data ko access kar raha hai.
+    </div>
+
+     <h2>🧠 What is an Browser Storage in JavaScript?</h2>
+
+
+
+    <div class="note">
+        <b>English:</b><br>
+        Browser Storage means storing data inside the user’s web browser.<br>
+        There are mainly <b>two types</b> of browser storage:<br>
+        <ul>
+            <li><b>localStorage</b> – Permanent (data stays even after page reload or browser close)</li>
+            <li><b>sessionStorage</b> – Temporary (data clears when the tab is closed)</li>
+        </ul>
+        <b>Urdu:</b><br>
+        Browser Storage ka matlab hai ke hum apna data user ke browser ke andar store kar sakte hain.<br>
+        Do main types hoti hain:<br>
+        <ul>
+            <li><b>localStorage</b> – Data permanently save rehta hai, browser band hone ke baad bhi.</li>
+            <li><b>sessionStorage</b> – Data sirf tab tak rehta hai jab tak tab open hai, tab band hote hi delete ho
+                jata hai.</li>
+        </ul>
+    </div>
+
+
+
+    <h2>🔍 Difference Between localStorage and sessionStorage</h2>
+    <table>
+        <tr>
+            <th>Feature</th>
+            <th>localStorage</th>
+            <th>sessionStorage</th>
+        </tr>
+        <tr>
+            <td>Data Lifetime</td>
+            <td>Stays permanently (until manually cleared)</td>
+            <td>Clears when tab is closed</td>
+        </tr>
+        <tr>
+            <td>Storage Limit</td>
+            <td>Around 5–10 MB</td>
+            <td>Same (5–10 MB)</td>
+        </tr>
+        <tr>
+            <td>Scope</td>
+            <td>Accessible from all tabs of same domain</td>
+            <td>Only accessible in same browser tab</td>
+        </tr>
+        <tr>
+            <td>Use Case</td>
+            <td>Login tokens, theme preference, saved data</td>
+            <td>Temporary forms, tab-specific info</td>
+        </tr>
+    </table>
+
+
+
+    <div class="note">
+        <b>Summary:</b><br>
+        ✅ <b>localStorage:</b> Permanent storage (data stays until cleared).<br>
+        ⏳ <b>sessionStorage:</b> Temporary storage (clears when tab closes).<br>
+        🔠 Use <b>JSON.stringify()</b> to save objects as text.<br>
+        🔄 Use <b>JSON.parse()</b> to convert back to object.<br><br>
+        <b>Urdu:</b><br>
+        localStorage permanent data save karta hai, jabke sessionStorage tab close hone ke baad delete ho jata hai.
+        Objects save karne ke liye unhe string mai convert karte hain using JSON.stringify(),
+        aur load karte waqt wapas object mai badalte hain using JSON.parse().
+    </div>
+
+    <script src="./object.js"></script>
+</body>
+
+</html>

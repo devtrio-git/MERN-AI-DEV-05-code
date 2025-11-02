@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM Manipulation in JavaScript</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f3f7fa;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+      color: #0055aa;
+    }
+    h2 {
+      color: #0077cc;
+      border-bottom: 2px solid #0077cc;
+      padding-bottom: 5px;
+    }
+    .note {
+      background: #e8f4ff;
+      border-left: 5px solid #0077cc;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    .example {
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    button {
+      background: #0077cc;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      margin-top: 5px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌳 DOM Manipulation in JavaScript</h1>
+
+  <div class="note">
+    <b>DOM (Document Object Model)</b><br>
+    <b>English:</b> DOM is a tree-like structure created by the browser from your HTML code.  
+    JavaScript uses it to access, change, or delete HTML elements.<br>
+    <b>Urdu:</b> Jab HTML page load hota hai, browser usko ek tree structure mai convert karta hai jise DOM kehte hain.  
+    JavaScript isi DOM ke zariye elements ko read, change, ya add kar sakti hai.
+  </div>
+
+  <h2>🎯 Common DOM Methods</h2>
+  <ul>
+    <li><b>getElementById()</b> → Select element by ID</li>
+    <li><b>getElementsByClassName()</b> → Select all elements with same class</li>
+    <li><b>querySelector()</b> → Select first element by CSS selector</li>
+    <li><b>innerText / textContent</b> → Change or get text</li>
+    <li><b>innerHTML</b> → Change HTML inside an element</li>
+    <li><b>style.property</b> → Change CSS style</li>
+    <li><b>createElement()</b> → Create new HTML element</li>
+    <li><b>appendChild()</b> → Add new element inside another</li>
+    <li><b>removeChild()</b> → Remove a child element</li>
+    <li><b>value</b> → Get value from input field</li>
+  </ul>
+
+  <h2>🧠 Example 1: Change Text Using DOM</h2>
+  <div class="example">
+    <h3 id="heading">Hello Students!</h3>
+    <button onclick="changeText()">Change Text</button>
+  </div>
+
+  <script>
+    function changeText() {
+      const heading = document.getElementById("heading");
+      heading.innerText = "You clicked the button!";
+    }
+  </script>
+
+  <h2>✏️ Example 2: Get Input Value</h2>
+  <div class="example">
+    <input type="text" id="studentName" placeholder="Enter your name" />
+    <button onclick="showName()">Show Name</button>
+    <p id="displayName"></p>
+  </div>
+
+  <script>
+    function showName() {
+      const nameInput = document.getElementById("studentName").value;
+      document.getElementById("displayName").innerText = "Your name is: " + nameInput;
+    }
+  </script>
+
+  <h2>🪄 Example 3: Create and Append Child</h2>
+  <div class="example">
+    <ul id="fruitList">
+      <li>Apple</li>
+      <li>Mango</li>
+    </ul>
+    <button onclick="addFruit()">Add Fruit</button>
+  </div>
+
+  <script>
+    function addFruit() {
+      const newFruit = document.createElement("li");
+      newFruit.innerText = "Banana";
+      document.getElementById("fruitList").appendChild(newFruit);
+    }
+  </script>
+
+  <h2>🗑️ Example 4: Remove Child Element</h2>
+  <div class="example">
+    <ul id="subjectList">
+      <li>Math</li>
+      <li>Science</li>
+      <li>English</li>
+    </ul>
+    <button onclick="removeSubject()">Remove Last Subject</button>
+  </div>
+
+  <script>
+    function removeSubject() {
+      const list = document.getElementById("subjectList");
+      if (list.lastElementChild) {
+        list.removeChild(list.lastElementChild);
+      }
+    }
+  </script>
+
+  <h2>🎨 Example 5: Change CSS Using DOM</h2>
+  <div class="example">
+    <p id="colorText">Click button to change my color!</p>
+    <button onclick="changeColor()">Change Color</button>
+  </div>
+
+  <script>
+    function changeColor() {
+      const text = document.getElementById("colorText");
+      text.style.color = "red";
+      text.style.fontWeight = "bold";
+    }
+  </script>
+
+  <div class="note">
+    <b>Summary:</b><br>
+    🧩 DOM allows JavaScript to dynamically change HTML content and CSS style without reloading the page.<br>
+    🌐 DOM ke zariye hum HTML page ko programmatically control kar sakte hain.
+  </div>
+</body>
+</html>
