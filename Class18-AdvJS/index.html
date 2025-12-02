@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Notes: Higher Order Functions & Map/Filter/Reduce</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        .note-box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        code,
+        pre {
+            background: #222;
+            color: #0f0;
+            padding: 10px;
+            border-radius: 5px;
+            display: block;
+            margin-top: 10px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Higher Order Functions & Map, Filter, Reduce</h2>
+
+    <div class="note-box">
+        <h3>What is a Higher-Order Function?</h3>
+        <p>A Higher-Order Function (HOF) is a function that either:</p>
+        <ul>
+            <li>Takes another function as an argument</li>
+            <li>OR returns a new function</li>
+        </ul>
+        <pre><code>function greet(name) {
+    return "Hello " + name;
+}
+
+function higherOrder(fn) {
+    return fn("Ashar");
+}
+
+console.log(higherOrder(greet));</code></pre>
+    </div>
+
+    <div class="note-box">
+        <h3>map()</h3>
+        <p><strong>map()</strong> is used to transform each element of an array and returns a new array.</p>
+        <pre><code>const numbers = [1, 2, 3, 4];
+const doubled = numbers.map(n => n * 2);
+console.log(doubled);</code></pre>
+    </div>
+
+    <div class="note-box">
+        <h3>filter()</h3>
+        <p><strong>filter()</strong> is used to filter elements based on a condition.</p>
+        <pre><code>const numbers = [1, 2, 3, 4, 5];
+const even = numbers.filter(n => n % 2 === 0);
+console.log(even);</code></pre>
+    </div>
+
+    <div class="note-box">
+        <h3>reduce()</h3>
+        <p><strong>reduce()</strong> is used to reduce an array to a single value (sum, total, etc.).</p>
+        <pre><code>const numbers = [1, 2, 3, 4];
+const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+console.log(sum);</code></pre>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+    <script type="module" src="./data.js"></script>
+    <script type="module" src="./analytics.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+<!-- const numbers = [10, 20, 30, 40];
+
+const result = numbers.reduce((acc, curr) => {
+    return acc + curr;
+}, 0);
+
+console.log(result); // 100
+
+Step-by-step:
+
+Start: acc = 0
+
+Step1: acc = 0 + 10 = 10
+
+Step2: acc = 10 + 20 = 30
+
+Step3: acc = 30 + 30 = 60
+
+Step4: acc = 60 + 40 = 100
+Output = 100
+
+-->
