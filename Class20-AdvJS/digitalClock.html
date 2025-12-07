@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .clock{
+            font-size: 48px;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Digital Clock</h1>
+    <div class="clock">
+        <!-- <span id="hours">00</span> :
+        <span id="minutes">00</span> :
+        <span id="seconds">00</span> -->
+    </div>
+</body>
+<script>
+    function digitalClock(){
+        var getClock = document.querySelector('.clock');
+        var getTime = new Date();
+        var hours = getTime.getHours(); //22
+        var minutes = getTime.getMinutes(); //56
+        var seconds = getTime.getSeconds(); //32
+
+        hours = (hours < 10 ? '0' : '') + hours;
+        minutes = (minutes < 10 ? '0' : '') + minutes;
+        seconds = (seconds < 10 ? '0' : '') + seconds;
+
+
+        getClock.textContent = `${hours} : ${minutes} : ${seconds}`;
+    }
+
+    setInterval(digitalClock, 1000);
+
+    // initial call to display clock immediately
+    digitalClock();
+</script>
+</html>
