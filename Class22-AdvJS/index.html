@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting & Closures</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.2;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 8px;
+        }
+
+        p {
+            max-width: 800px;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            margin-top: 10px;
+        }
+
+        b {
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hoisting in JavaScript</h1>
+    <p>
+        Hoisting is a JavaScript mechanism where variables, functions, and classes are moved to the top of their
+        containing scope during the compile phase. This means they can be used in code before they are declared.
+        <br><br>
+
+        However:
+        <br><br>
+
+        Variables declared with <b>var</b> are hoisted but initialized to <b>undefined</b>.
+        <br><br>
+
+        Variables declared with <b>let</b> and <b>const</b> are hoisted but remain in a
+        <b>temporal dead zone (TDZ)</b> until their declaration is encountered.
+        <br><br>
+
+        Function declarations are hoisted completely (both the function definition and declaration).
+    </p>
+
+    <h1>Closures</h1>
+    <p>
+        <b>Local vs Global Scope</b>
+        <br><br>
+
+        <b>1. Local Scope</b><br>
+        A variable has local scope when it is declared inside a function or a block.
+        It can only be accessed within the function or block where it is defined.
+        Local variables are created when execution starts and destroyed when it ends.
+        <br><br>
+
+        <b>2. Global Scope</b><br>
+        A variable has global scope when it is declared outside of all functions or blocks.
+        It can be accessed and modified from anywhere in the code.
+    </p>
+
+    <p>
+        <b>Lexical Scope</b>
+        <br><br>
+
+        Lexical scope means the scope of a variable is determined by its position in the source code.
+        Nested functions can access variables declared in their outer scopes.
+        <br><br>
+
+        <b>Closure</b>
+        <br><br>
+
+        A closure is created when a function remembers variables from its lexical scope,
+        even after the outer function has finished executing.
+        Closures allow inner functions to access and manipulate outer variables.
+    </p>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
