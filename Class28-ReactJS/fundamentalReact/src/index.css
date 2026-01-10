@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+      /* font-family: "BBH Bartle", sans-serif; */
+}
+body{
+    background-color: #FCF8F8;
+}
+.primary-color{
+    color: #1D546D;
+}
+.large{
+    font-size: 20px;
+}
+.medium{
+    font-size: 15px;
+}
+.small{
+    font-size: 12px;
+}
